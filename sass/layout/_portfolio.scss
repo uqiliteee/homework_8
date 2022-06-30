@@ -1,0 +1,94 @@
+.portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -30px;
+        margin-top: -30px;
+        text-decoration: none;
+    }
+    
+    &__item {
+        flex-basis: calc(100% / 3 - 30px);
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+    
+    &__link {
+        text-decoration: none;
+        display: block;
+    
+        transition-property: box-shadow;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:hover,
+        &:focus {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
+    
+    }
+    
+    &__thumb {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    &__thumb-title {
+        position: absolute;
+        transform: translateY(100%);
+        display: inline-block;
+        padding: 63px 24px;
+        font-size: 18px;
+        line-height: 1.56;
+        color: var(--overlay-text);
+        background-color: var(--overlay-background);
+        width: 100%;
+        height: 100%;
+        top: 0;
+    
+        transition-property: var(--accent-color);
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+        .portfolio__link:hover & {
+            transform: translateY(0);
+        }
+    
+        .portfolio__link:focus & {
+            transform: translateY(0);
+        }
+
+    }
+    
+    &__wrap {
+        background: #FFFFFF;
+        border-bottom: 1px solid #EEEEEE;
+        border-left: 1px solid #EEEEEE;
+        border-right: 1px solid #EEEEEE;
+        padding: 20px 24px;
+    }
+    
+    &__list-title {
+        margin-bottom: 4px;
+        color: var(--main-text-color);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+    
+    
+    }
+    
+    &__list-subtitle {
+        color: var(--secondary-text-color);
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 1.87;
+    
+    
+    }
+}

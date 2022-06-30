@@ -1,0 +1,61 @@
+.hero {
+    padding: 118px 0 ;
+    height: 400px;
+    max-width: 767px;
+    @include desktop {
+    max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    }
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--footer-color);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/фон_героя.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__title {
+        max-width: 360px;
+        margin: 0 auto 30px auto;
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 1.62;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        @include desktop {
+        font-size: 44px;
+        line-height: 1.36;
+
+        max-width: 696px;
+        margin-top: 0;
+        margin-right: auto;
+        margin-left: auto;
+        }
+        color: var(--main-color);
+    }
+    
+    &__btn {
+        padding: 10px 32px;
+        display: inline-block;
+
+        color: var(--main-color);
+        background-color: var(--accent-color);
+        font-weight: 700;
+        line-height: 1.87;
+        letter-spacing: 0.06em;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    
+        transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:hover,
+        &:focus {
+            background-color: #188ce8;
+        }
+    }
+
+}

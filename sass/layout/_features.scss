@@ -1,0 +1,39 @@
+.features {
+    padding-top: 94px;
+
+    &__list {
+        display: flex;
+    }
+    
+    &__icons {
+        height: 120px;
+        display: block;
+        padding: 25px 100px;
+        margin-bottom: 30px;
+        background: #F5F4FA;
+        border-radius: 4px;
+    }
+    
+    &__svg {
+        display: block;
+        fill: currentColor;
+    
+    }
+    
+    &__item:not(:first-child) {
+        margin-left: 30px;
+    }
+    
+    &__list-title {
+        font-size: 14px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        line-height: 1.14;
+        text-transform: uppercase;
+    }
+    
+    &__list-subtitle {
+        color: var(--secondary-text-color);
+        line-height: 1.71;
+    }
+}
