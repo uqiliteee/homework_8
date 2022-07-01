@@ -5,15 +5,15 @@
     padding-right: 15px;
 
     @include mobile {
-        width: 448px;
+        width: 450px;
     }
     
     @include tablet {
-        width: 720px;
+        width: 738px;
     }
     
     @include desktop {
-         width: 1200px;
+        width: 1200px;
     }
 
 }
