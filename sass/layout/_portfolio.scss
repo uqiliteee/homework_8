@@ -1,24 +1,30 @@
 .portfolio {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding: 60px 0;
+    @include desktop {
+        padding: 94px 0 ;
+    }
 
     &__list {
         display: flex;
         flex-wrap: wrap;
-        margin-left: -30px;
-        margin-top: -30px;
-        text-decoration: none;
+        gap: 30px
     }
     
     &__item {
-        flex-basis: calc(100% / 3 - 30px);
-        margin-left: 30px;
-        margin-top: 30px;
+        @include tablet {
+            flex-basis: calc((100% - 30px) / 2)
+        }
+        @include desktop {
+            flex-basis: calc((100% - 60px) / 3);
+        }
     }
     
     &__link {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
         text-decoration: none;
-        display: block;
     
         transition-property: box-shadow;
         transition-duration: 250ms;
@@ -69,7 +75,9 @@
         border-left: 1px solid #EEEEEE;
         border-right: 1px solid #EEEEEE;
         padding: 20px 24px;
+
     }
+
     
     &__list-title {
         margin-bottom: 4px;
