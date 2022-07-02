@@ -557,10 +557,12 @@ button {
 
 .features {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .features {
     padding-top: 94px;
+    padding-bottom: 0;
   }
 }
 .features__list {
@@ -618,6 +620,11 @@ button {
 .occupation {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+@media (max-width: 1200px) {
+  .occupation {
+    display: none;
+  }
 }
 .occupation__list {
   display: flex;
