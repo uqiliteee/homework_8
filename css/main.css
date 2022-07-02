@@ -79,11 +79,18 @@ address {
 
 .logo {
   display: inline-block;
-  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  line-height: 1.17;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
   text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .container {
@@ -793,8 +800,26 @@ button {
 }
 
 .footer__wrap {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer__wrap {
+    text-align: start;
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__tablet-wrap {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__tablet-wrap {
+    align-items: baseline;
+  }
 }
 
 .footer__logo {
@@ -807,12 +832,17 @@ button {
 }
 
 .footer__list {
-  margin-right: 70px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer__list {
+    margin-right: 70px;
+  }
 }
 
 .footer__adress {
   display: inline-block;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   color: var(--main-color);
   font-style: normal;
   line-height: 1.71;
@@ -821,13 +851,18 @@ button {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 1200px) {
+  .footer__adress {
+    margin-bottom: 9px;
+  }
+}
 .footer__adress:hover, .footer__adress:focus {
   color: var(--accent-color);
 }
 
 .footer__mail-link {
   display: inline-block;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   color: var(--links-color);
   font-style: normal;
   line-height: 1.71;
@@ -835,6 +870,11 @@ button {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .footer__mail-link {
+    margin-bottom: 9px;
+  }
 }
 .footer__mail-link:hover, .footer__mail-link:focus {
   color: var(--accent-color);
@@ -868,11 +908,14 @@ button {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer__subscription {
-  margin-left: auto;
+@media screen and (min-width: 1200px) {
+  .footer__subscription {
+    margin-left: auto;
+  }
 }
 
 .footer__subscription-title {
+  margin-top: 60px;
   margin-bottom: 20px;
   font-weight: 700;
   line-height: 1.14;
@@ -882,11 +925,23 @@ button {
 
 .footer__form {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer__form {
+    display: flex;
+    flex-direction: unset;
+    align-items: flex-end;
+  }
 }
 
 .footer__form-input {
   background-color: transparent;
-  width: 348px;
+  width: 450px;
+  flex-grow: 1;
   height: 50px;
   padding-left: 16px;
   color: rgba(255, 255, 255, 0.6);
@@ -897,6 +952,11 @@ button {
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .footer__form-input {
+    width: 358px;
+  }
 }
 .footer__form-input:hover, .footer__form-input:focus {
   border-color: var(--accent-color);
@@ -913,7 +973,7 @@ button {
   align-items: center;
   width: 200px;
   height: 50px;
-  margin-left: 10px;
+  margin-top: 20px;
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
@@ -923,6 +983,11 @@ button {
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .footer__form-button {
+    margin-left: 10px;
+  }
 }
 .footer__form-button:hover, .footer__form-button:focus {
   background-color: #188CE8;
