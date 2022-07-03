@@ -2,16 +2,31 @@
     padding: 118px 0 ;
     height: 400px;
     max-width: 767px;
+
+    @include tablet {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/фон-героя-таб.jpg);
+        @include retina {
+                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/фон-героя-таб-2х.jpg);
+            }
+    }
+    
     @include desktop {
     max-width: 1600px;
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/фон_героя.jpg);
+    @include retina {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/фон-героя-2х.jpg);
+        }
     }
     margin: 0 auto;
     text-align: center;
     background-color: var(--footer-color);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/фон_героя.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/фон-героя-моб.jpg);
+    @include retina {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/фон-героя-моб-2х.jpg);
+    }
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
