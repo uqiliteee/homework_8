@@ -440,6 +440,11 @@ button {
     padding: 16px 0;
   }
 }
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-right: 88px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .header__logo {
     margin-right: 93px;
@@ -450,6 +455,7 @@ button {
 }
 
 .nav {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -476,7 +482,7 @@ button {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .nav__link {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -494,6 +500,13 @@ button {
   margin-left: auto;
   align-items: center;
   padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: block;
+    margin-left: auto;
+    align-items: center;
+  }
 }
 @media screen and (min-width: 1200px) {
   .contacts {
@@ -521,6 +534,13 @@ button {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 738px) and (max-width: 1200px) {
+  .contacts__link {
+    text-align: right;
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
 @media screen and (min-width: 1200px) {
   .contacts__link {
     padding-top: 30px;
@@ -542,6 +562,25 @@ button {
   display: block;
   margin-left: auto;
   background-color: transparent;
+}
+
+.menu-open-btn:hover .menu-open-svg,
+.menu-close-btn:hover .menu-close-svg {
+  fill: var(--accent-color);
+}
+
+.menu-open-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .menu-open-btn {
+    display: none;
+  }
 }
 
 .mob-menu {
@@ -617,6 +656,7 @@ button {
 }
 
 .mob-menu__socials-link {
+  color: var(--accent-color);
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2;
@@ -1080,7 +1120,7 @@ button {
 
 .footer__form-input {
   background-color: transparent;
-  width: 450px;
+  width: 320px;
   flex-grow: 1;
   height: 50px;
   padding-left: 16px;

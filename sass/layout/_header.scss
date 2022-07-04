@@ -1,5 +1,6 @@
 .header {
     border-bottom: 1px solid #ECECEC;
+   
 
     > .container {
         display: flex;
@@ -9,6 +10,9 @@
     &__logo {
         @include mobile {
         padding: 16px 0 ;
+        }
+        @include tablet {
+            margin-right: 88px;
         }
         @include desktop {
         margin-right: 93px;
@@ -22,6 +26,7 @@
 }
 
 .nav {
+    position: relative;
     display: flex;
     align-items: center;
 
@@ -39,7 +44,7 @@
     &__link {
         position: relative;
         display: block;
-        @include desktop {
+        @include tablet {
         padding-top: 30px;
         padding-bottom: 30px;
         }
@@ -65,6 +70,11 @@
 
 .contacts {
     display: none;
+    @include tablet {
+        display: block;
+        margin-left: auto;
+        align-items: center;
+    }
     @include desktop {
     display: flex;
     }
@@ -83,6 +93,11 @@
     }
     
     &__link {
+        @media screen and (min-width:738px) and (max-width:1200px) {
+            text-align: right;
+            font-size: 12px;
+            line-height: 1.17;
+        }
         @include desktop {
         padding-top: 30px;
         padding-bottom: 30px;
@@ -118,18 +133,22 @@
     display: block;
     margin-left: auto;
     background-color: transparent;
-    
 }
-// .menu-open-btn {
-//     @media screen (min-width: 738px) and (max-width: 1200px) {
-//             display: none;
-//         }
-//     position: fixed;
-//     top: 10px;
-//     right: 15px;
-//     padding: 0;
-//     border: none;
-//     cursor: pointer;
+.menu-open-btn:hover .menu-open-svg,
+.menu-close-btn:hover .menu-close-svg {
+    fill: var(--accent-color);
+}
+.menu-open-btn {
+    @include tablet {
+        display: none;
+    }
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
 .mob-menu {
     position: fixed;
     top: 0;
@@ -205,6 +224,7 @@
 }
 
 .mob-menu__socials-link {
+    color: var(--accent-color);
     font-weight: 500;
     font-size: 18px;
     line-height: 1.2;
