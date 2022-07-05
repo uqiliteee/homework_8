@@ -174,13 +174,13 @@ button {
 
 .filter {
   margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  row-gap: 15px;
 }
 @media screen and (min-width: 480px) {
   .filter {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    row-gap: 15px;
     margin-bottom: 40px;
   }
 }
@@ -231,12 +231,18 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 450px;
-  height: 609px;
+  width: 90vw;
+  height: 90vh;
   background-color: var(--overlay-text);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -467,8 +473,10 @@ button {
     display: flex;
   }
 }
-.nav__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 768px) {
+  .nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 .nav__link {
   position: relative;
@@ -497,19 +505,19 @@ button {
 
 .contacts {
   display: none;
-  margin-left: auto;
-  align-items: center;
-  padding: 0;
 }
 @media screen and (min-width: 768px) {
   .contacts {
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
   .contacts {
     display: flex;
+    margin-left: auto;
+    align-items: center;
+    padding: 0;
   }
 }
 .contacts__item {
@@ -517,8 +525,15 @@ button {
   align-items: center;
   justify-content: center;
 }
-.contacts__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 .contacts__link {
   display: flex;
@@ -535,7 +550,6 @@ button {
 }
 @media screen and (min-width: 738px) and (max-width: 1200px) {
   .contacts__link {
-    text-align: right;
     font-size: 12px;
     line-height: 1.17;
   }
@@ -561,6 +575,9 @@ button {
   display: block;
   margin-left: auto;
   background-color: transparent;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-open-btn:hover .menu-open-svg,
@@ -569,7 +586,7 @@ button {
 }
 
 .menu-open-btn {
-  position: absolute;
+  margin-left: auto;
   top: 10px;
   right: 15px;
   padding: 0;
@@ -1119,7 +1136,7 @@ button {
 
 .footer__form-input {
   background-color: transparent;
-  width: 320px;
+  width: 90vw;
   flex-grow: 1;
   height: 50px;
   padding-left: 16px;
@@ -1131,6 +1148,11 @@ button {
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .footer__form-input {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer__form-input {
