@@ -1,20 +1,21 @@
 .filter {
-    margin-bottom: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    row-gap: 15px;
-    @include mobile {
-        margin-bottom: 40px;
-    }
     @include tablet {
         display: flex;
         justify-content: center;
         margin-bottom: 30px;
     }
+    @include desktop {
+        margin-bottom: 50px;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+    
     
     &__item:not(:last-child) {
         margin-right: 8px;
+        margin-bottom: 15px;
     }
     
     &__btn {
