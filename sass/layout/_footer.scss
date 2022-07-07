@@ -111,11 +111,12 @@
     font-size: inherit;
     color: var(--main-color);
 }
-
-
 .socials__link--white {
-    fill: var(--main-color);
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social__icon--white {
+    fill: var(--main-color);
 }
 
 .footer__subscription {
@@ -188,6 +189,7 @@
     margin-top: 20px;
     @include desktop {
     margin-left: 10px;
+    margin-top: 0;
     }
     font-weight: 700;
     line-height: 1.88;

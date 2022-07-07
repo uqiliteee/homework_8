@@ -1111,8 +1111,11 @@ button {
 }
 
 .socials__link--white {
-  fill: var(--main-color);
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social__icon--white {
+  fill: var(--main-color);
 }
 
 @media screen and (min-width: 1200px) {
@@ -1199,6 +1202,7 @@ button {
 @media screen and (min-width: 1200px) {
   .footer__form-button {
     margin-left: 10px;
+    margin-top: 0;
   }
 }
 .footer__form-button:hover, .footer__form-button:focus {
